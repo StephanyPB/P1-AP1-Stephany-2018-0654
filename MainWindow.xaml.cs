@@ -1,4 +1,5 @@
-﻿using System;
+﻿using P1_AP1_Stephany_2018_0654.UI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,7 +28,8 @@ namespace P1_AP1_Stephany_2018_0654
 
         private void AportesMenuItem_Click(object sender, RoutedEventArgs e)
         {
-            
+            rAportes aportes = new rAportes();
+            aportes.Show();
 
         }
 
