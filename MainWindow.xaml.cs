@@ -35,6 +35,8 @@ namespace P1_AP1_Stephany_2018_0654
 
         private void ConsultaAportesMenuItem_Click(object sender, RoutedEventArgs e)
         {
+            cAportes aportes = new cAportes();
+            aportes.Show();
 
         }
     }
