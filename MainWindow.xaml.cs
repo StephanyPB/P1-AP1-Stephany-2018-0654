@@ -24,5 +24,16 @@ namespace P1_AP1_Stephany_2018_0654
         {
             InitializeComponent();
         }
+
+        private void AportesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            
+
+        }
+
+        private void ConsultaAportesMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
