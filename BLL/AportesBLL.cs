@@ -16,14 +16,14 @@ namespace P1_AP1_Stephany_2018_0654.BLL
         /// Permite Guardar una entidad en la base de datos
         /// </summary>
 
-        private static bool Insertar(Aportes Aportes)
+        private static bool Insertar(Aportes Aporte)
         {
             bool paso = false;
             //Creamos una instancia del contexto para poder conectar con la DB
             Contexto db = new Contexto();
             try
             {
-                if (db.Aportes.Add(Aportes) != null)
+                if (db.Aportes.Add(Aporte) != null)
 
                     paso = db.SaveChanges() > 0;
             }
@@ -39,13 +39,13 @@ namespace P1_AP1_Stephany_2018_0654.BLL
         /// <summary>
         /// Permite Modificar una entidad en la base de datos
         /// </summary>
-        private static bool Modificar(Aportes Aportes)
+        private static bool Modificar(Aportes Aporte)
         {
             bool paso = false;
             Contexto db = new Contexto();
             try
             {
-                db.Entry(Aportes).State = EntityState.Modified;
+                db.Entry(Aporte).State = EntityState.Modified;
                 paso = db.SaveChanges() > 0;
             }
             catch (Exception)
@@ -66,11 +66,11 @@ namespace P1_AP1_Stephany_2018_0654.BLL
             Contexto db = new Contexto();
             try
             {
-                Aportes Aportes = db.Aportes.Find(id);
+                Aportes Aporte = db.Aportes.Find(id);
 
                 if (Existe(id))
                 {
-                    db.Aportes.Remove(Aportes);
+                    db.Aportes.Remove(Aporte);
                     paso = db.SaveChanges() > 0;
                 }
             }
@@ -88,10 +88,10 @@ namespace P1_AP1_Stephany_2018_0654.BLL
         public static Aportes Buscar(int id)
         {
             Contexto db = new Contexto();
-            Aportes Aportes = new Aportes();
+            Aportes Aporte = new Aportes();
             try
             {
-                Aportes = db.Aportes.Find(id);
+                Aporte = db.Aportes.Find(id);
 
             }
             catch (Exception)
@@ -100,18 +100,18 @@ namespace P1_AP1_Stephany_2018_0654.BLL
             {
                 db.Dispose();
             }
-            return Aportes;
+            return Aporte;
         }
         /// <summary>
         /// Permite extraer una lista de Usuario de la base de datos
         /// </summary>
         public static List<Aportes> GetList(Expression<Func<Aportes, bool>> expression)
         {
-            List<Aportes> Aportes = new List<Aportes>();
+            List<Aportes> Aporte = new List<Aportes>();
             Contexto db = new Contexto();
             try
             {
-                Aportes = db.Aportes.Where(expression).ToList();
+                Aporte = db.Aportes.Where(expression).ToList();
             }
             catch (Exception)
             {
@@ -121,7 +121,7 @@ namespace P1_AP1_Stephany_2018_0654.BLL
             {
                 db.Dispose();
             }
-            return Aportes;
+            return Aporte;
         }
 
         private static bool Existe(int id)
@@ -143,12 +143,12 @@ namespace P1_AP1_Stephany_2018_0654.BLL
             return encontrado;
         }
 
-        public static bool Guardar(Aportes Aportes)
+        public static bool Guardar(Aportes Aporte)
         {
-            if (!Existe(Aportes.AporteId))
-                return Insertar(Aportes);
+            if (!Existe(Aporte.AporteId))
+                return Insertar(Aporte);
             else
-                return Modificar(Aportes);
+                return Modificar(Aporte);
         }
     }
 }
