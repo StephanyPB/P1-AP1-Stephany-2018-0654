@@ -55,11 +55,7 @@ namespace P1_AP1_Stephany_2018_0654.UI
         }
         private void Limpiar()
         {
-            AportesIDTextBox.Text = string.Empty;
-            FechaTextBox.SelectedDate = DateTime.Now;
-            PersonaTextBox.Text = string.Empty;
-            ConceptoTextBox.Text = string.Empty;
-            MontoTextBox.Text = string.Empty;
+            
             this.Aporte = new Aportes();
             DataContext = this.Aporte;
         }
