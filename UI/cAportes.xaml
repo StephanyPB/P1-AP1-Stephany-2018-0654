@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P1_AP1_Stephany_2018_0654.UI"
         mc:Ignorable="d"
-        Title="cAportes" Height="468" Width="550">
+        Title="cAportes" Height="490" Width="600">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10,5,10,0">
 
@@ -45,11 +45,11 @@
             <StackPanel HorizontalAlignment="Left" >
                 <DataGrid x:Name="DatosDataGrid" Height="350" Width="527" AutoGenerateColumns="False" IsReadOnly="True">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="aporteID" Binding="{Binding aporteID}"/>
-                        <DataGridTextColumn Header="Fecha" Binding="{Binding fecha}"/>
-                        <DataGridTextColumn Header="Persona" Binding="{Binding persona}"/>
-                        <DataGridTextColumn Header="Concepto" Binding="{Binding concepto}"/>
-                        <DataGridTextColumn Header="Monto" Binding="{Binding monto}"/>
+                        <DataGridTextColumn Header="AporteId" Binding="{Binding AporteId}"/>
+                        <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}"/>
+                        <DataGridTextColumn Header="Persona" Binding="{Binding Persona}"/>
+                        <DataGridTextColumn Header="Concepto" Binding="{Binding Concepto}"/>
+                        <DataGridTextColumn Header="Monto" Binding="{Binding Monto}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
@@ -58,7 +58,7 @@
                 <Label x:Name="ConteoLabel" Content="Conteo: " />
                 <TextBox x:Name="ConteoTextBox" Height="30" Width="70" Margin="10,5,0,0"/>
 
-                <Label x:Name="MontoLabel" Content="Monto: " Margin="250,0,0,0"/>
+                <Label x:Name="MontoLabel" Content="Monto: " Margin="250,0,0,0" FontWeight="Normal"/>
                 <TextBox x:Name="MontoTextBox" Height="30" Width="70" Margin="10,0,0,0"/>
             </StackPanel>
         </StackPanel>

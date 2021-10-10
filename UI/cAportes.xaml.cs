@@ -57,7 +57,7 @@ namespace P1_AP1_Stephany_2018_0654.UI
             DatosDataGrid.ItemsSource = null;
             DatosDataGrid.ItemsSource = listado;
 
-            MontoTextBox.Text = listado.Sum(x => x.Monto).ToString();
+            MontoTextBox.Text = listado.Sum(x => x.Monto).ToString("N2");
             ConteoTextBox.Text = listado.Count().ToString();
         }
     }
