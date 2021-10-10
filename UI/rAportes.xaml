@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:P1_AP1_Stephany_2018_0654.UI"
         mc:Ignorable="d"
-        Title="Registro De Aportes" Height="450" Width="800">
+        Title="Registro De Aportes" Height="450" Width="400">
     <Grid>
         <StackPanel Orientation="Vertical">
             <Label x:Name="AportesIDLabel" Content=" Aportes ID" />
