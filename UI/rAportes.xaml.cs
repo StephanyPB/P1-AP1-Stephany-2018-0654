@@ -104,9 +104,9 @@ namespace P1_AP1_Stephany_2018_0654.UI
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
-            Aportes existe = AportesBLL.Buscar(this.Aporte.aporteID);
+            Aportes existe = AportesBLL.Buscar(this.Aporte.AporteId);
 
-            if (AportesBLL.Eliminar(this.Aporte.aporteID))
+            if (AportesBLL.Eliminar(this.Aporte.AporteId))
             {
                 Limpiar();
                 MessageBox.Show("Eliminado!", " Exito", MessageBoxButton.OK, MessageBoxImage.Information);

@@ -10,7 +10,7 @@
         <StackPanel Orientation="Vertical">
             <Label x:Name="AportesIDLabel" Content=" Aportes ID" />
             <StackPanel Orientation="Horizontal" >
-                <TextBox x:Name="AportesIDTextBox" Text="{Binding aporteID}" Height="30" Width="70" Margin="10,0,0,0"/>
+                <TextBox x:Name="AportesIDTextBox" Text="{Binding AporteId}" Height="30" Width="70" Margin="10,0,0,0"/>
                 <Button x:Name="BuscarIDButton" Margin="5,0,0,0" Click="BuscarIDButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/buscar.png"/>
@@ -21,22 +21,22 @@
             
             <Label x:Name="FechaLabel" Content="Fecha" />
             <StackPanel Orientation="Horizontal" >
-                <DatePicker x:Name="FechaTextBox" Text="{Binding fecha}" Height="30" Width="150" Margin="10,0,0,0" />
+                <DatePicker x:Name="FechaTextBox" Text="{Binding Fecha}" Height="30" Width="150" Margin="10,0,0,0" />
             </StackPanel>
 
             <Label x:Name="Personalabel" Content="Persona" />
             <StackPanel Orientation="Horizontal" >
-                <TextBox x:Name="PersonaTextBox" Text="{Binding persona}" Height="30" Width="150" Margin="10,0,0,0"/>
+                <TextBox x:Name="PersonaTextBox" Text="{Binding Persona}" Height="30" Width="150" Margin="10,0,0,0"/>
             </StackPanel>
 
             <Label x:Name="Conceptolabel" Content="Concepto" />
             <StackPanel Orientation="Horizontal" >
-                <TextBox x:Name="ConceptoTextBox" Text="{Binding concepto}" Height="30" Width="150" Margin="10,0,0,0"/>
+                <TextBox x:Name="ConceptoTextBox" Text="{Binding Concepto}" Height="30" Width="150" Margin="10,0,0,0"/>
             </StackPanel>
 
             <Label x:Name="Montolabel" Content="Monto" />
             <StackPanel Orientation="Horizontal" >
-                <TextBox x:Name="MontoTextBox" Text="{Binding monto}" Height="30" Width="150" Margin="10,0,0,0"/>
+                <TextBox x:Name="MontoTextBox" Text="{Binding Monto}" Height="30" Width="150" Margin="10,0,0,0"/>
             </StackPanel>
 
             <!--Botones-->

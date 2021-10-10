@@ -130,7 +130,7 @@ namespace P1_AP1_Stephany_2018_0654.BLL
             Contexto db = new Contexto();
             try
             {
-                encontrado = db.Aportes.Any(x => x.aporteID == id);
+                encontrado = db.Aportes.Any(x => x.AporteId == id);
             }
             catch (Exception)
             {
@@ -145,7 +145,7 @@ namespace P1_AP1_Stephany_2018_0654.BLL
 
         public static bool Guardar(Aportes Aportes)
         {
-            if (!Existe(Aportes.aporteID))
+            if (!Existe(Aportes.AporteId))
                 return Insertar(Aportes);
             else
                 return Modificar(Aportes);
